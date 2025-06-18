@@ -1,0 +1,75 @@
+body {
+    background-color: rgb(91, 52, 175);
+
+}
+
+.card {
+    background-color: rgb(91, 52, 175);
+    height: 300px;
+
+}
+
+.container {
+
+    height: 330px;
+
+
+}
+
+.div-bg {
+    background-color: white;
+    color: rgb(91, 52, 175);
+
+}
+
+.btn {
+    filter: blur(5px);
+}
+
+.spinner {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aliceblue; */
+    transition: 0.75s, visibilty 0.75s;
+    /* backdrop-filter: blur(10px);  */
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(10px);
+    /* filter: blur(5px); */
+
+}
+
+.spinner-hiden {
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+.spinner::after {
+
+    content: "";
+    width: 100px;
+    height: 100px;
+    border: 15px dashed black;
+    border-top-color: rgb(255, 255, 255);
+    border-left-color: white;
+    border-radius: 100%;
+    animation: loding 0.75s ease infinite;
+
+}
+
+@keyframes loding {
+    from {
+        transform: rotate(0turn);
+    }
+
+    /* Rotate the spinner 1  */
+    to {
+        transform: rotate(1turn);
+    }
+}
