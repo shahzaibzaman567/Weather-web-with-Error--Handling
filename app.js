@@ -1,5 +1,5 @@
 let spinner = document.querySelector(".spinner")
-let btn = document.querySelector(".btn")
+let butt = document.querySelector(".butt")
 // The data of this city pass in array. 
 const weatherdata = {
     karachi: {},
@@ -24,16 +24,16 @@ fetch(Lahore)
         console.log("Temperature:", weatherdata.lahore.temperature + "°C");
 
         spinner.classList.remove("spinner")
-        btn.classList.remove("btn")
+        butt.classList.remove("butt")
         // div.innerHTML="say hay";
     })
     .catch((err) => {
 
         console.error("API Error:", err);
         spinner.classList.remove("spinner");
-        btn.classList.remove("btn");
+        butt.classList.remove("butt");
         div.classList.add("div-bg");
-        div.innerHTML = "Error"
+        div.innerHTML = "Network Error Please check your network?"
         document.body.removeChild(spinner)
     });
 

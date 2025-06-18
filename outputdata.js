@@ -16,7 +16,7 @@ form.addEventListener("submit", (event) => {
     if (mached && weatherdata[city]) {
         let data = weatherdata[city];
         div.innerHTML = `
-Name  : ${city}
+    City : ${city}
 <br>
 Temperature   :    ${data.temperature}  °C
 <br>
